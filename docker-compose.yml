@@ -1,0 +1,9 @@
+services:
+  n8n:
+    image: n8nio/n8n:1.85.4
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/custom
+    volumes:
+      - ../custom-nodes:/home/node/.n8n/custom
